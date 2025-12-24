@@ -1,0 +1,92 @@
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-size:300% 300%;
+  animation:bg 12s ease infinite;
+  font-family:"Segoe UI",system-ui,sans-serif
+}
+
+.cal{
+  width:320px;
+  padding:24px;
+  border-radius:24px;
+  background:linear-gradient(145deg,#00000025,#2c2c2c46);
+  box-shadow:0 28px 70px rgba(0,0,0,.25)
+}
+
+.cal h1{
+  height:66px;
+  margin-bottom:20px;
+  padding:14px 16px;
+  border-radius:18px;
+  background:linear-gradient(145deg,#343434,#2d2d2d);
+  color:#f5f5f5;
+  text-align:right;
+  font-size:30px;
+  overflow-x:auto
+}
+
+.cal>div{
+  display:flex;
+  gap:12px;
+  margin-bottom:12px
+}
+
+.cal button{
+  flex:1;
+  height:58px;
+  border:none;
+  border-radius:18px;
+  background:linear-gradient(145deg,#2a2a2a,#1b1b1b);
+  color:#f1f1f1;
+  font-size:18px;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 6px 14px rgba(0,0,0,.35);
+  transition:transform .15s ease,box-shadow .15s ease
+}
+
+.cal button:hover{
+  transform:translateY(-1px);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.08),
+    0 8px 20px rgba(0,0,0,.45)
+}
+
+.cal>div:not(:last-child) button:last-child{
+  background:linear-gradient(145deg,#ff9f1a,#ff7a00);
+  color:#111;
+  font-weight:700
+}
+
+.cal>div:not(:last-child) button:last-child:hover{
+  box-shadow:
+    0 0 10px rgba(255,159,26,.45),
+    0 8px 20px rgba(0,0,0,.45)
+}
+
+.cal>div:last-child button:last-child{
+  background:linear-gradient(145deg,#ff9f1a,#ff7a00);
+  color:#111;
+  font-weight:800;
+ 
+}
+
+.cal>div:last-child button:last-child:hover{
+  box-shadow:
+    0 0 14px rgba(255,159,26,.6),
+    0 10px 26px rgba(0,0,0,.45)
+}
+
+.cal>div:last-child button:first-child{
+  flex:2
+}
+/* % button – math utility */
+.cal>div:nth-child(2) button:nth-child(2){
+  background:linear-gradient(145deg,#242424,#1a1a1a);
+  color:#09ff00;
+  font-weight:700
+}
